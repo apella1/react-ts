@@ -1,9 +1,9 @@
-import "./App.css";
-import { Context } from "./components";
+import { Context, Pokemon } from "./components";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
+      <Pokemon />
       <Context />
     </div>
   );
