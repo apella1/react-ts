@@ -16,7 +16,7 @@ function usePokemonSource(): { pokemon: Pokemon[] } {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
 
   useEffect(() => {
-    fetch("./pokemon.json")
+    fetch("../../../pokemon.json")
       .then((response) => response.json())
       .then((data) => setPokemon(data));
   }, []);
@@ -41,9 +41,9 @@ const PokemonList = () => {
     <div>
       <p>Theme: {theme}</p>
       <ul>
-        {pokemon.map((p) => {
-          <li key={p.id}>{p.name}</li>;
-        })}
+        {pokemon.map((p) => (
+          <li key={p.id}>{p.name}</li>
+        ))}
       </ul>
     </div>
   );
